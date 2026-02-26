@@ -1,5 +1,6 @@
 import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
+import { ContactForm } from "@/components/contact-form";
 
 export const metadata = {
   title: "צרו קשר",
@@ -21,66 +22,7 @@ export default function ContactPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-xl p-8 shadow-sm">
-              <form className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    {content.contact.formLabels.name}
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    {content.contact.formLabels.phone}
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    dir="ltr"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    {content.contact.formLabels.email}
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    dir="ltr"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    {content.contact.formLabels.subject}
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    {content.contact.formLabels.message}
-                  </label>
-                  <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-white py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium"
-                >
-                  {content.contact.formLabels.submit}
-                </button>
-              </form>
-            </div>
+            <ContactForm />
 
             {/* Contact Info */}
             <div className="space-y-8">

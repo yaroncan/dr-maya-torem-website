@@ -118,8 +118,7 @@
     "subtitle": "נשמח לעמוד לשירותכן",
     "phone": "050-0000000",
     "email": "info@drmayatorem.com",
-    "address": "כתובת המרפאה, עיר",
-    "hours": "ימים א׳-ה׳, 09:00-18:00",
+    "address": "מרפאת ברודצקי",
     "formLabels": {
       "name": "שם מלא",
       "phone": "טלפון",
@@ -129,7 +128,8 @@
       "submit": "שליחה",
       "success": "ההודעה נשלחה בהצלחה! ניצור איתך קשר בהקדם.",
       "error": "אירעה שגיאה. אנא נסו שוב מאוחר יותר."
-    }
+    },
+    "notificationEmail": "mayatorem@gmail.com"
   },
 
   "footer": {

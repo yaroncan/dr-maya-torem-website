@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
 
@@ -9,35 +10,58 @@ export default function Home() {
 
       {/* Hero */}
       <section className="bg-surface py-20 md:py-32">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            {content.hero.headline}
-          </h1>
-          <p className="text-xl md:text-2xl text-secondary font-medium mb-6">
-            {content.hero.subtitle}
-          </p>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            {content.hero.description}
-          </p>
-          <Link
-            href={content.hero.ctaLink}
-            className="inline-block bg-primary text-white text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            {content.hero.ctaText}
-          </Link>
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 text-center md:text-right">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+              {content.hero.headline}
+            </h1>
+            <p className="text-xl md:text-2xl text-secondary font-medium mb-6">
+              {content.hero.subtitle}
+            </p>
+            <p className="text-lg text-gray-600 mb-10 max-w-2xl">
+              {content.hero.description}
+            </p>
+            <Link
+              href={content.hero.ctaLink}
+              className="inline-block bg-primary text-white text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              {content.hero.ctaText}
+            </Link>
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src="/dr-mayatorem.jpg"
+              alt={content.about.imageAlt}
+              width={400}
+              height={400}
+              className="rounded-2xl shadow-lg object-cover w-[280px] h-[280px] md:w-[400px] md:h-[400px]"
+              priority
+            />
+          </div>
         </div>
       </section>
 
       {/* About */}
       <section className="py-16 md:py-24">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             {content.about.title}
           </h2>
-          <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-            {content.about.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="flex-shrink-0">
+              <Image
+                src="/dr-mayatorem.jpg"
+                alt={content.about.imageAlt}
+                width={300}
+                height={300}
+                className="rounded-2xl shadow-md object-cover w-[240px] h-[240px] md:w-[300px] md:h-[300px]"
+              />
+            </div>
+            <div className="flex-1 space-y-4 text-lg text-gray-700 leading-relaxed">
+              {content.about.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -142,21 +166,12 @@ export default function Home() {
             {content.contact.title}
           </h2>
           <p className="text-lg text-gray-600 mb-8">{content.contact.subtitle}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a
-              href={`tel:${content.contact.phone}`}
-              className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
-            >
-              📞 {content.contact.phone}
-            </a>
-            <Link
-              href="/contact"
-              className="border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary-light transition-colors text-lg"
-            >
-              ✉️ {content.nav.contact}
-            </Link>
-          </div>
-          <p className="text-gray-500">{content.contact.hours}</p>
+          <Link
+            href="/contact"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+          >
+            ✉️ {content.nav.contact}
+          </Link>
         </div>
       </section>
 

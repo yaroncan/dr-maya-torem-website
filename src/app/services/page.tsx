@@ -43,20 +43,12 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">רוצה לשמוע עוד?</h2>
           <p className="text-lg text-gray-600 mb-8">{content.contact.subtitle}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={`tel:${content.contact.phone}`}
-              className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
-            >
-              📞 {content.contact.phone}
-            </a>
-            <Link
-              href="/contact"
-              className="border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary-light transition-colors text-lg"
-            >
-              ✉️ {content.nav.contact}
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+          >
+            ✉️ {content.nav.contact}
+          </Link>
         </div>
       </section>
 

@@ -1,37 +1,11 @@
 import Link from "next/link";
 import content from "@/content/site-content.json";
+import { Header, Footer } from "@/components/layout";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-primary">
-            {content.siteTitle}
-          </Link>
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-foreground hover:text-primary transition-colors">
-              {content.nav.home}
-            </Link>
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-              {content.nav.about}
-            </Link>
-            <Link href="/services" className="text-foreground hover:text-primary transition-colors">
-              {content.nav.services}
-            </Link>
-            <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
-              {content.nav.contact}
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-primary text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              {content.nav.cta}
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section className="bg-surface py-20 md:py-32">
@@ -116,18 +90,47 @@ export default function Home() {
       {/* Testimonials */}
       <section className="bg-surface py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             {content.testimonials.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <p className="text-center text-gray-500 mb-12">
+            מבוסס על חוות דעת מ-
+            <a
+              href={content.testimonials.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              {content.testimonials.source}
+            </a>
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {content.testimonials.items.map((testimonial, i) => (
               <div key={i} className="bg-white rounded-xl p-8 shadow-sm">
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, j) => (
+                    <span key={j} className="text-yellow-400 text-xl">★</span>
+                  ))}
+                </div>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <p className="text-primary font-bold">— {testimonial.author}</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-primary font-bold">— {testimonial.author}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.date}</p>
+                </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <a
+              href={content.testimonials.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+            >
+              לכל חוות הדעת ב-MedReviews ←
+            </a>
           </div>
         </div>
       </section>
@@ -157,15 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-white py-10">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-lg font-bold mb-2">{content.siteTitle}</p>
-          <p className="text-gray-300 mb-4">{content.siteDescription}</p>
-          <p className="text-gray-400 text-sm mb-2">{content.footer.copyright}</p>
-          <p className="text-gray-500 text-xs">{content.footer.disclaimer}</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

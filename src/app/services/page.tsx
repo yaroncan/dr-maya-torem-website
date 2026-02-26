@@ -2,6 +2,11 @@ import Link from "next/link";
 import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
 
+export const metadata = {
+  title: "שירותים",
+  description: "גינקולוגיה, מנופאוזה ובריאות האישה - ד״ר מאיה תורם",
+};
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">

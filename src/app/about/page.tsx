@@ -2,6 +2,11 @@ import Link from "next/link";
 import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
 
+export const metadata = {
+  title: "אודות",
+  description: content.about.paragraphs[0],
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">

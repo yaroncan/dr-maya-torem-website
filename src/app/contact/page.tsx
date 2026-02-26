@@ -1,6 +1,11 @@
 import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
 
+export const metadata = {
+  title: "צרו קשר",
+  description: "צרו קשר עם ד״ר מאיה תורם לקביעת תור או לכל שאלה.",
+};
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen">

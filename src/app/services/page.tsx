@@ -4,7 +4,7 @@ import { Header, Footer } from "@/components/layout";
 
 export const metadata = {
   title: "שירותים",
-  description: "גינקולוגיה, מנופאוזה ובריאות האישה - ד״ר מאיה תורם",
+  description: "גינקולוגיה, מנופאוזה ובריאות האישה - ד״ר מאיה טורם",
 };
 
 export default function ServicesPage() {

@@ -10,29 +10,29 @@ const heebo = Heebo({
 
 export const metadata: Metadata = {
   title: {
-    default: "ד״ר מאיה תורם | גינקולוגית ומומחית למנופאוזה",
-    template: "%s | ד״ר מאיה תורם",
+    default: "ד״ר מאיה טורם | גינקולוגית ומומחית למנופאוזה",
+    template: "%s | ד״ר מאיה טורם",
   },
   description:
-    "ד״ר מאיה תורם - רופאה מומחית בגינקולוגיה ובמנופאוזה. טיפול מקצועי, אישי ומותאם לכל אישה.",
+    "ד״ר מאיה טורם - רופאה מומחית בגינקולוגיה ובמנופאוזה. טיפול מקצועי, אישי ומותאם לכל אישה.",
   keywords: [
     "גינקולוגית",
     "מנופאוזה",
     "רופאת נשים",
-    "ד״ר מאיה תורם",
+    "ד״ר מאיה טורם",
     "גיל המעבר",
     "בריאות האישה",
     "gynecologist",
     "menopause specialist",
   ],
-  authors: [{ name: "ד״ר מאיה תורם" }],
+  authors: [{ name: "ד״ר מאיה טורם" }],
   openGraph: {
-    title: "ד״ר מאיה תורם | גינקולוגית ומומחית למנופאוזה",
+    title: "ד״ר מאיה טורם | גינקולוגית ומומחית למנופאוזה",
     description:
       "טיפול מקצועי, אישי ומותאם לכל אישה. ליווי רפואי בגישה חמה ומכבדת.",
     locale: "he_IL",
     type: "website",
-    siteName: "ד״ר מאיה תורם",
+    siteName: "ד״ר מאיה טורם",
   },
   robots: {
     index: true,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Physician",
-  name: "ד״ר מאיה תורם",
+  name: "ד״ר מאיה טורם",
   description:
     "רופאה מומחית בגינקולוגיה ובמנופאוזה. טיפול מקצועי, אישי ומותאם לכל אישה.",
   medicalSpecialty: ["Gynecology", "Menopause Medicine"],

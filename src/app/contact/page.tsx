@@ -27,15 +27,6 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="flex justify-center mb-4">
-                <Image
-                  src="/dr-mayatorem4.png"
-                  alt="ד״ר מאיה טורם"
-                  width={250}
-                  height={250}
-                  className="rounded-2xl shadow-lg object-cover w-[200px] h-[240px] md:w-[250px] md:h-[300px]"
-                />
-              </div>
               <div>
                 <h3 className="text-lg font-bold mb-2">📍 כתובת</h3>
                 <p className="text-gray-700 text-lg">{content.contact.address}</p>

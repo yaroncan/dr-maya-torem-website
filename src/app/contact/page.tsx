@@ -28,6 +28,18 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
+                <h3 className="text-lg font-bold mb-2">📞 טלפון</h3>
+                <a href={`tel:${content.contact.phone}`} className="text-gray-700 text-lg hover:text-primary" dir="ltr">
+                  {content.contact.phone}
+                </a>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold mb-2">✉️ אימייל</h3>
+                <a href={`mailto:${content.contact.email}`} className="text-gray-700 text-lg hover:text-primary" dir="ltr">
+                  {content.contact.email}
+                </a>
+              </div>
+              <div>
                 <h3 className="text-lg font-bold mb-2">📍 כתובת</h3>
                 <p className="text-gray-700 text-lg">{content.contact.address}</p>
               </div>

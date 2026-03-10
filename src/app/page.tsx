@@ -43,14 +43,25 @@ export default function Home() {
 
       {/* About */}
       <section className="py-16 md:py-24">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             {content.about.title}
           </h2>
-          <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-            {content.about.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          <div className="flex flex-col md:flex-row items-start gap-10">
+            <div className="flex-shrink-0 mx-auto md:mx-0">
+              <Image
+                src="/dr-mayatorem2.jpg"
+                alt={content.about.imageAlt}
+                width={300}
+                height={300}
+                className="rounded-2xl shadow-lg object-cover w-[250px] h-[300px] md:w-[300px] md:h-[360px]"
+              />
+            </div>
+            <div className="space-y-4 text-lg text-gray-700 leading-relaxed flex-1">
+              {content.about.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
         </div>
       </section>

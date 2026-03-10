@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     }
 
     await resend.emails.send({
-      from: "אתר ד״ר מאיה טורם <onboarding@resend.dev>",
+      from: "ד״ר מאיה טורם <noreply@drmayatorem.com>",
       to: Array.isArray(content.contact.notificationEmail)
         ? content.contact.notificationEmail
         : [content.contact.notificationEmail],

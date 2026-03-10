@@ -9,6 +9,7 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dr-maya-torem-website.vercel.app"),
   title: {
     default: "ד״ר מאיה טורם | גינקולוגית ומומחית למנופאוזה",
     template: "%s | ד״ר מאיה טורם",

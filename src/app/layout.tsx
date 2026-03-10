@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     locale: "he_IL",
     type: "website",
     siteName: "ד״ר מאיה טורם",
+    images: [
+      {
+        url: "/dr-mayatorem.jpg",
+        width: 400,
+        height: 400,
+        alt: "ד״ר מאיה טורם",
+      },
+    ],
   },
   robots: {
     index: true,

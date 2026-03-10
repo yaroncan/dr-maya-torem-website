@@ -50,7 +50,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start gap-10">
             <div className="flex-shrink-0 mx-auto md:mx-0">
               <Image
-                src="/dr-mayatorem2.jpg"
+                src="/dr-mayatorem5.jpg"
                 alt={content.about.imageAlt}
                 width={300}
                 height={300}
@@ -162,6 +162,13 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
+          <Image
+            src="/dr-mayatorem2.jpg"
+            alt={content.about.imageAlt}
+            width={300}
+            height={360}
+            className="rounded-2xl shadow-lg object-cover w-[250px] h-[300px] md:w-[300px] md:h-[360px] mx-auto mb-8"
+          />
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {content.contact.title}
           </h2>

@@ -30,10 +30,10 @@ export async function POST(request: NextRequest) {
       to: Array.isArray(content.contact.notificationEmail)
         ? content.contact.notificationEmail
         : [content.contact.notificationEmail],
-      subject: `פנייה חדשה מהאתר: ${subject || "ללא נושא"}`,
+      subject: `פנייה חדשה עבור ד"ר מאיה טורם: ${subject || "ללא נושא"}`,
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px;">
-          <h2>פנייה חדשה מהאתר</h2>
+          <h2>פנייה חדשה מהאתר של ד"ר מאיה טורם</h2>
           <table style="border-collapse: collapse; width: 100%;">
             <tr><td style="padding: 8px; font-weight: bold;">שם:</td><td style="padding: 8px;">${name}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">טלפון:</td><td style="padding: 8px;" dir="ltr">${phone}</td></tr>

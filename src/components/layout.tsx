@@ -23,7 +23,7 @@ export function Header() {
           </Link>
           <Link
             href="/contact"
-            className="bg-primary text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-primary text-white px-5 py-2 rounded-lg hover:bg-[#5a7a60] transition-colors"
           >
             {content.nav.cta}
           </Link>

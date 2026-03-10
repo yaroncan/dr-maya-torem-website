@@ -23,7 +23,7 @@ export default function Home() {
             </p>
             <Link
               href={content.hero.ctaLink}
-              className="inline-block bg-primary text-white text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-block bg-primary text-white text-lg px-8 py-4 rounded-lg hover:bg-[#5a7a60] transition-colors"
             >
               {content.hero.ctaText}
             </Link>
@@ -157,7 +157,7 @@ export default function Home() {
           <p className="text-lg text-gray-600 mb-8">{content.contact.subtitle}</p>
           <Link
             href="/contact"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-[#5a7a60] transition-colors text-lg"
           >
             ✉️ {content.nav.contact}
           </Link>

@@ -27,7 +27,9 @@ export async function POST(request: NextRequest) {
 
     await resend.emails.send({
       from: "אתר ד״ר מאיה טורם <onboarding@resend.dev>",
-      to: content.contact.notificationEmail,
+      to: Array.isArray(content.contact.notificationEmail)
+        ? content.contact.notificationEmail
+        : [content.contact.notificationEmail],
       subject: `פנייה חדשה מהאתר: ${subject || "ללא נושא"}`,
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px;">
@@ -44,7 +46,8 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "שגיאה בשליחת ההודעה" },
       { status: 500 }

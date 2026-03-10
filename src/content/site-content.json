@@ -146,7 +146,7 @@
       "success": "ההודעה נשלחה בהצלחה! ניצור איתך קשר בהקדם.",
       "error": "אירעה שגיאה. אנא נסו שוב מאוחר יותר."
     },
-    "notificationEmail": "yaroncan@gmail.com"
+    "notificationEmail": ["yaroncan@gmail.com", "yaronc@microsoft.com"]
   },
 
   "footer": {

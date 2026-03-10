@@ -73,7 +73,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full bg-primary text-white py-4 rounded-lg hover:bg-[#5a7a60] transition-colors text-lg font-medium disabled:opacity-50"
+            className="w-full bg-primary text-white py-4 rounded-lg hover:bg-[#874e54] transition-colors text-lg font-medium disabled:opacity-50"
           >
             {status === "sending" ? "שולח..." : labels.submit}
           </button>

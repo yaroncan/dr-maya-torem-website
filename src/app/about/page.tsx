@@ -53,7 +53,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold mb-4">רוצה לקבוע תור?</h2>
           <Link
             href="/contact"
-            className="inline-block bg-primary text-white text-lg px-8 py-4 rounded-lg hover:bg-[#5a7a60] transition-colors"
+            className="inline-block bg-primary text-white text-lg px-8 py-4 rounded-lg hover:bg-[#874e54] transition-colors"
           >
             {content.nav.cta}
           </Link>

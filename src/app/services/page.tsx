@@ -45,7 +45,7 @@ export default function ServicesPage() {
           <p className="text-lg text-gray-600 mb-8">{content.contact.subtitle}</p>
           <Link
             href="/contact"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-[#5a7a60] transition-colors text-lg"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-[#874e54] transition-colors text-lg"
           >
             ✉️ {content.nav.contact}
           </Link>

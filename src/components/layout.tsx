@@ -28,6 +28,12 @@ export function Header() {
             {content.nav.cta}
           </Link>
         </nav>
+        <Link
+          href="/contact"
+          className="md:hidden bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-[#874e54] transition-colors"
+        >
+          {content.nav.cta}
+        </Link>
       </div>
     </header>
   );

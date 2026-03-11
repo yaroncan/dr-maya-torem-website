@@ -4,8 +4,8 @@ import { Header, Footer } from "@/components/layout";
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata = {
-  title: "צרו קשר",
-  description: "צרו קשר עם ד״ר מאיה טורם לקביעת תור או לכל שאלה.",
+  title: "צרו קשר | קביעת תור לד״ר מאיה טורם",
+  description: "קביעת תור לד״ר מאיה טורם, רופאת נשים מומחית ברמת אביב, תל אביב. טלפון: 03-7620620. המרכז לבריאות האישה, ברודצקי 43.",
 };
 
 export default function ContactPage() {

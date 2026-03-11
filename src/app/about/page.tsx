@@ -4,8 +4,8 @@ import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
 
 export const metadata = {
-  title: "אודות",
-  description: content.about.paragraphs[0],
+  title: "אודות ד״ר מאיה טורם | רופאת נשים מומחית",
+  description: "ד״ר מאיה טורם, רופאת נשים מומחית בגניקולוגיה וגיל המעבר. בוגרת רפואה באוניברסיטת תל אביב, בעלת MPH. מקימת מרפאה התנדבותית לנשים חסרות מעמד.",
 };
 
 export default function AboutPage() {

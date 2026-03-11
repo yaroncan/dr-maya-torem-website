@@ -3,8 +3,8 @@ import content from "@/content/site-content.json";
 import { Header, Footer } from "@/components/layout";
 
 export const metadata = {
-  title: "שירותים",
-  description: "גינקולוגיה, מנופאוזה ובריאות האישה - ד״ר מאיה טורם",
+  title: "תחומי טיפול | גניקולוגיה, גיל המעבר, מעקב הריון",
+  description: "ד״ר מאיה טורם מציעה מגוון שירותים: ייעוץ גיל המעבר, מעקב גניקולוגי, התאמת אמצעי מניעה, תכנון הריון, מעקב הריון וביקורת לאחר לידה. קביעת תור: 03-7620620",
 };
 
 export default function ServicesPage() {

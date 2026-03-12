@@ -101,6 +101,15 @@ const jsonLd = {
   },
 };
 
+// Schema.org structured data for WebSite (controls site name in Google search results)
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "ד״ר מאיה טורם",
+  alternateName: "Dr. Maya Torem",
+  url: "https://drmayatorem.com",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -112,6 +121,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className={`${heebo.variable} font-sans antialiased`}>

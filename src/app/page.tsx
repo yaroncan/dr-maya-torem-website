@@ -177,7 +177,7 @@ export default function Home() {
             href="/contact"
             className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-[#874e54] transition-colors text-lg"
           >
-            ✉️ {content.nav.contact}
+            {content.nav.cta}
           </Link>
         </div>
       </section>

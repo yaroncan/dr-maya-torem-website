@@ -18,9 +18,6 @@ export function Header() {
           <Link href="/services" className="text-foreground hover:text-primary transition-colors">
             {content.nav.services}
           </Link>
-          <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
-            {content.nav.contact}
-          </Link>
           <Link
             href="/contact"
             className="bg-primary text-white px-5 py-2 rounded-lg hover:bg-[#874e54] transition-colors"

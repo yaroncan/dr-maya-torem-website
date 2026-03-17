@@ -11,7 +11,7 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   metadataBase: new URL("https://drmayatorem.com"),
   title: {
-    default: "ד״ר מאיה טורם | רופאת נשים מומחית וייעוץ גיל המעבר | רמת אביב, תל אביב",
+    default: "ד״ר מאיה טורם | רופאת נשים מומחית וייעוץ גיל המעבר",
     template: "%s | ד״ר מאיה טורם - רופאת נשים",
   },
   description:

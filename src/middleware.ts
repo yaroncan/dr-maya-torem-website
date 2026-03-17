@@ -11,8 +11,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Redirect non-canonical domains (e.g., *.vercel.app) to the real domain
-  if (host !== CANONICAL_DOMAIN && host !== `www.${CANONICAL_DOMAIN}`) {
+  // Redirect www and non-canonical domains (e.g., *.vercel.app) to the primary domain
+  if (host !== CANONICAL_DOMAIN) {
     const url = new URL(request.url);
     url.host = CANONICAL_DOMAIN;
     url.protocol = "https";

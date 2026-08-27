@@ -16,9 +16,9 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, phone, email, subject, message } = body;
+    const { name, phone, email, subject } = body;
 
-    if (!name || !phone || !message) {
+    if (!name || !phone || !subject) {
       return NextResponse.json(
         { error: "שדות חובה חסרים" },
         { status: 400 }
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       to: Array.isArray(content.contact.notificationEmail)
         ? content.contact.notificationEmail
         : [content.contact.notificationEmail],
-      subject: `פנייה חדשה עבור ד"ר מאיה טורם: ${subject || "ללא נושא"}`,
+      subject: `פנייה חדשה עבור ד"ר מאיה טורם: ${subject}`,
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px;">
           <h2>פנייה חדשה מהאתר של ד"ר מאיה טורם</h2>
@@ -38,8 +38,7 @@ export async function POST(request: NextRequest) {
             <tr><td style="padding: 8px; font-weight: bold;">שם:</td><td style="padding: 8px;">${name}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">טלפון:</td><td style="padding: 8px;" dir="ltr">${phone}</td></tr>
             ${email ? `<tr><td style="padding: 8px; font-weight: bold;">אימייל:</td><td style="padding: 8px;" dir="ltr">${email}</td></tr>` : ""}
-            ${subject ? `<tr><td style="padding: 8px; font-weight: bold;">נושא:</td><td style="padding: 8px;">${subject}</td></tr>` : ""}
-            <tr><td style="padding: 8px; font-weight: bold;">הודעה:</td><td style="padding: 8px;">${message}</td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">נושא:</td><td style="padding: 8px;">${subject}</td></tr>
           </table>
         </div>
       `,

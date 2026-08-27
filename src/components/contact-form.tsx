@@ -16,7 +16,6 @@ export function ContactForm() {
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
 
     try {
@@ -64,11 +63,8 @@ export function ContactForm() {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">{labels.subject}</label>
-            <input type="text" name="subject" className={inputClass} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">{labels.message}</label>
-            <textarea name="message" rows={5} required className={`${inputClass} resize-none`} />
+            <input type="text" name="subject" required className={inputClass} />
+            <p className="mt-2 text-sm text-gray-600">{labels.privacyNotice}</p>
           </div>
           <button
             type="submit"
